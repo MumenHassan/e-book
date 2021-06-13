@@ -25,7 +25,7 @@ class BookRequest extends FormRequest
     public function rules()
     {
 
-        //publish
+        //add
         if (request()->type == 'store') {
             return[
                 'name' => [

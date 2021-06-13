@@ -24,8 +24,8 @@ class AuthorRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:authors,id,'.request()->id ,
-            'email'=>'required|unique:authors,id,'. request()->id,
+            'name'=>'required|unique:authors,name,'.request()->id ,
+            'email'=>'required|unique:authors,email,'. request()->id,
             'biography'=>'nullable',
         ];
     }

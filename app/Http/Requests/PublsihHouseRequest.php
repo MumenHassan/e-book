@@ -24,8 +24,8 @@ class PublsihHouseRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:publishing_houses,id,'.request()->id,
-            'email'=>'required|unique:publishing_houses,id,'. request()->id,
+            'name'=>'required|unique:publishing_houses,name,'.request()->id,
+            'email'=>'required|unique:publishing_houses,email,'. request()->id,
             'country'=>'required',
             'address'=>'required',
         ];

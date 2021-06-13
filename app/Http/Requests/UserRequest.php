@@ -31,7 +31,7 @@ class UserRequest extends FormRequest
             ];
         }else{
             return [
-                'name' => 'required|unique:users,id,'.request()->id,
+                'name' => 'required|unique:users,name,'.request()->id,
                 'email' => 'required|email|unique:users,email,'.$this->user->id,
 
             ];
